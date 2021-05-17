@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[After Dev]]></title><description><![CDATA[A blog.]]></description><link>https://after.dev</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 17 May 2021 01:59:00 GMT</lastBuildDate><item><title><![CDATA[Revisiting the self and singleton class in Ruby]]></title><description><![CDATA[In Ruby, everything is an object, and every object has an anonymous class, which defines the methods the object can respond to. This…]]></description><link>https://after.dev/revisiting-the-self-and-singleton-class-in-ruby/</link><guid isPermaLink="false">https://after.dev/revisiting-the-self-and-singleton-class-in-ruby/</guid><pubDate>Sun, 16 May 2021 20:52:20 GMT</pubDate><content:encoded>&lt;p&gt;In Ruby, everything is an object, and every object has an anonymous class, which defines the methods the object can respond to. This anonymous class is called the &lt;em&gt;singleton class&lt;/em&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[After Dev]]></title><description><![CDATA[A blog.]]></description><link>https://after.dev</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 17 May 2021 02:10:04 GMT</lastBuildDate><item><title><![CDATA[Revisiting the self and singleton class in Ruby]]></title><description><![CDATA[In Ruby, everything is an object, and every object has an anonymous class, which defines the methods the object can respond to. This…]]></description><link>https://after.dev/revisiting-the-self-and-singleton-class-in-ruby/</link><guid isPermaLink="false">https://after.dev/revisiting-the-self-and-singleton-class-in-ruby/</guid><pubDate>Sun, 16 May 2021 20:52:20 GMT</pubDate><content:encoded>&lt;p&gt;In Ruby, everything is an object, and every object has an anonymous class, which defines the methods the object can respond to. This anonymous class is called the &lt;em&gt;singleton class&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -64,9 +64,17 @@ word&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;singleton_clas
   &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
 
-&lt;span class=&quot;token constant&quot;&gt;Foobar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;foo
-&lt;span class=&quot;token constant&quot;&gt;Foobar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;instance_methods
-&lt;span class=&quot;token comment&quot;&gt;#=&gt; [:foo, :bar, ...]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+f &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Foobar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt;
+f&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;foo
+
+&lt;span class=&quot;token constant&quot;&gt;Foobar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;instance_method&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token symbol&quot;&gt;:foo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#=&gt; #&amp;lt;UnboundMethod: Foobar#foo()&gt;&lt;/span&gt;
+&lt;span class=&quot;token constant&quot;&gt;Foobar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;instance_method&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token symbol&quot;&gt;:bar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#=&gt; #&amp;lt;UnboundMethod: Foobar#bar()&gt;&lt;/span&gt;
+&lt;span class=&quot;token constant&quot;&gt;Foobar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;singleton_methods
+&lt;span class=&quot;token comment&quot;&gt;#=&gt; []&lt;/span&gt;
+f&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;singleton_methods
+&lt;span class=&quot;token comment&quot;&gt;#=&gt; [:baz]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;The eval methods&lt;/h2&gt;
 &lt;p&gt;In Ruby, &lt;code class=&quot;language-text&quot;&gt;instance_eval&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;class_eval&lt;/code&gt; provide that provide the ability to modify a class or an object. The names are very similar, and their behavior is counterintuitive.&lt;/p&gt;
 &lt;ul&gt;

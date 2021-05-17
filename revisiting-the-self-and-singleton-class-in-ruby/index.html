@@ -67,9 +67,17 @@ word<span class="token punctuation">.</span>singleton_class<span class="token pu
   <span class="token keyword">end</span>
 <span class="token keyword">end</span>
 
-<span class="token constant">Foobar</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">.</span>foo
-<span class="token constant">Foobar</span><span class="token punctuation">.</span>instance_methods
-<span class="token comment">#=> [:foo, :bar, ...]</span></code></pre></div>
+f <span class="token operator">=</span> <span class="token constant">Foobar</span><span class="token punctuation">.</span><span class="token keyword">new</span>
+f<span class="token punctuation">.</span>foo
+
+<span class="token constant">Foobar</span><span class="token punctuation">.</span>instance_method<span class="token punctuation">(</span><span class="token symbol">:foo</span><span class="token punctuation">)</span>
+<span class="token comment">#=> #&lt;UnboundMethod: Foobar#foo()></span>
+<span class="token constant">Foobar</span><span class="token punctuation">.</span>instance_method<span class="token punctuation">(</span><span class="token symbol">:bar</span><span class="token punctuation">)</span>
+<span class="token comment">#=> #&lt;UnboundMethod: Foobar#bar()></span>
+<span class="token constant">Foobar</span><span class="token punctuation">.</span>singleton_methods
+<span class="token comment">#=> []</span>
+f<span class="token punctuation">.</span>singleton_methods
+<span class="token comment">#=> [:baz]</span></code></pre></div>
 <h2>The eval methods</h2>
 <p>In Ruby, <code class="language-text">instance_eval</code> and <code class="language-text">class_eval</code> provide that provide the ability to modify a class or an object. The names are very similar, and their behavior is counterintuitive.</p>
 <ul>
