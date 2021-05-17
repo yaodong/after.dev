@@ -58,9 +58,17 @@ class Foobar
   end
 end
 
-Foobar.new.foo
-Foobar.instance_methods
-#=> [:foo, :bar, ...]
+f = Foobar.new
+f.foo
+
+Foobar.instance_method(:foo)
+#=> #<UnboundMethod: Foobar#foo()>
+Foobar.instance_method(:bar)
+#=> #<UnboundMethod: Foobar#bar()>
+Foobar.singleton_methods
+#=> []
+f.singleton_methods
+#=> [:baz]
 ```
 
 ## The eval methods
