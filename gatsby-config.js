@@ -8,7 +8,7 @@ module.exports = {
     description: `A blog.`,
     siteUrl: `https://after.dev/`,
     social: {
-      twitter: `http2xx`,
+      twitter: `CacheControl`,
     },
   },
   plugins: [
