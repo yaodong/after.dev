@@ -17,5 +17,5 @@ When adding an item, we follow a simple rule: describe facts or feelings, don't 
 
 Give your engineers a complaint box, and I'm sure the engineers will be happy.
 
-P.S. I would highly recommend David B. Copeland's book *Sustainable Web Development with Ruby on Rails*. Even if you don't use Ruby on Rails, you can still get inspiration from it.
+P.S. I would highly recommend [David B. Copeland](https://naildrivin5.com)'s book *[Sustainable Web Development with Ruby on Rails](https://sustainable-rails.com)*. Even if you don't use Ruby on Rails, you can still get inspiration from it.
 
