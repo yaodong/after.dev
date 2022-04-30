@@ -15,7 +15,7 @@ Therefore, there should be a mechanism to reduce these carrying costs during the
 
 When adding an item, we follow a simple rule: describe facts or feelings, don't make any judgments, or give any action items. Because these items become carrying costs for a reason, the solutions are not so obviously most of the time. Another unexpected benefit of having a complaint box is that it can connect the dots. Some seemingly unrelated issues have very similar solutions. Very interesting.
 
-Give your engineers a complaint box, and I'm sure the engineers will be happy.
+Give your engineers a complaint box, and I'm sure they will be happy.
 
 P.S. I would highly recommend [David B. Copeland](https://naildrivin5.com)'s book *[Sustainable Web Development with Ruby on Rails](https://sustainable-rails.com)*. Even if you don't use Ruby on Rails, you can still get inspiration from it.
 
