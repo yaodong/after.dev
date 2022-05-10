@@ -29,6 +29,11 @@ const Layout = ({ location, title, children }) => {
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
+      <script
+        defer
+        data-domain="yaodong.dev"
+        src="https://plausible.io/js/plausible.js"
+      ></script>
     </div>
   )
 }
