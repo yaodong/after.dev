@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Yaodong's Blog`,
+    title: `(after dev)`,
     author: {
       name: `Yaodong Zhao`,
       summary: `who lives and works in the Bay Area building useful things.`,
     },
     description: `A blog.`,
-    siteUrl: `https://yaodong.dev/`,
+    siteUrl: `https://after.dev/`,
     social: {
       twitter: `YaodongDev`,
     },
