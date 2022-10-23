@@ -30,6 +30,7 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
         <footer>
+          <div className="giscus"></div>
           <script
             src="https://giscus.app/client.js"
             data-repo="yaodong/weblog"
