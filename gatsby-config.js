@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `(after dev)`,
+    title: `Yaodong's Blog`,
     author: {
       name: `Yaodong Zhao`,
       summary: `who lives and works in the Bay Area building useful things.`,
     },
     description: `A blog.`,
-    siteUrl: `https://after.dev/`,
+    siteUrl: `https://yaodong.dev/`,
     social: {
       twitter: `YaodongDev`,
     },
@@ -54,8 +54,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        id: "G-E8XC309H1N"
-      }
+        id: "G-E8XC309H1N",
+      },
     },
     {
       resolve: `gatsby-plugin-feed`,
