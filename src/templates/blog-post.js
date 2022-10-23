@@ -1,7 +1,6 @@
+import { graphql, Link } from "gatsby"
 import * as React from "react"
-import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -31,7 +30,22 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
         <footer>
-          <Bio />
+          <script
+            src="https://giscus.app/client.js"
+            data-repo="yaodong/weblog"
+            data-repo-id="MDEwOlJlcG9zaXRvcnkzNjY0OTU1NzY="
+            data-category="[ENTER CATEGORY NAME HERE]"
+            data-category-id="[ENTER CATEGORY ID HERE]"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            crossorigin="anonymous"
+            async
+          ></script>
         </footer>
       </article>
       <nav className="blog-post-nav">
