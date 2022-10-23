@@ -1,6 +1,7 @@
 import { graphql, Link } from "gatsby"
 import * as React from "react"
 
+import Giscus from "../components/giscus"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -28,26 +29,6 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
-        <footer>
-          <div className="giscus"></div>
-          <script
-            src="https://giscus.app/client.js"
-            data-repo="yaodong/weblog"
-            data-repo-id="MDEwOlJlcG9zaXRvcnkzNjY0OTU1NzY="
-            data-category="General"
-            data-category-id="DIC_kwDOFdhHWM4CSJGn"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="bottom"
-            data-theme="preferred_color_scheme"
-            data-lang="en"
-            crossorigin="anonymous"
-            async
-          ></script>
-        </footer>
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -75,6 +56,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
+      <Giscus />
     </Layout>
   )
 }
