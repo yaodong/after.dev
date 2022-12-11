@@ -29,6 +29,10 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Not using disqus but enable by adding a config here
+disqus:
+  shortname: yaodong
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/
