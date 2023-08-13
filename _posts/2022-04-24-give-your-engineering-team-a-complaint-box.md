@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Give your enginner team a complaint box
+title: Give your engineering team a complaint box
 date: "2022-04-24T22:48:43.869Z"
 ---
 
