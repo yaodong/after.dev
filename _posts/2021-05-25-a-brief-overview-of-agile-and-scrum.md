@@ -1,5 +1,4 @@
 ---
-layout: post
 title: A brief overview of agile and scrum
 date: "2021-05-25T06:38:57.977Z"
 tags: ["agile", "scrum"]

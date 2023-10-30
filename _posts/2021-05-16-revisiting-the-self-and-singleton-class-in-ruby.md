@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Revisiting the self and singleton class in Ruby
 date: "2021-05-16T20:52:20.643Z"
 tags: ["ruby"]

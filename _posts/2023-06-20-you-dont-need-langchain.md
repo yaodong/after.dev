@@ -1,5 +1,4 @@
 ---
-layout: post
 title: You probably don't need LangChain
 date: "2023-06-20T06:23:27.930Z"
 ---
