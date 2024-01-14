@@ -9,13 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Yaodong`,
+    title: `Yaodong "Eric" Zhao`,
     author: {
       name: `Yaodong Zhao`,
       summary: `who lives and works in Bay Area building useful things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://yaodong.dev/`,
+    siteUrl: `https://yaodong.org/`,
     social: {
       linkedin: "yaodong",
       github: "yaodong",
