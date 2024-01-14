@@ -26,8 +26,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/posts`,
+        name: `posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/pages`,
+        name: `pages`,
       },
     },
     {
@@ -88,7 +95,10 @@ module.exports = {
               })
             },
             query: `{
-              allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+              allMarkdownRemark(
+                filter: { fileAbsolutePath: { regex: "/content/posts/" } }
+                sort: {frontmatter: {date: DESC}}
+              ) {
                 nodes {
                   excerpt
                   html
@@ -102,7 +112,7 @@ module.exports = {
                 }
               }
             }`,
-            output: "/rss.xml",
+            output: "/feed.xml",
             title: "Gatsby Starter Blog RSS Feed",
           },
         ],
